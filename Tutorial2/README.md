@@ -7,6 +7,14 @@
 - _Tutorials Repository GitLab URL_: <https://git.cs.dal.ca/saji/csci-5709-tutorials>
 - _Assignments Repository GitLab URL_: <https://git.cs.dal.ca/saji/csci-5709-assignments>
 
+- _Project Repository GitLab URL_: <https://git.cs.dal.ca/kumawat/csci-5709-grp-14>
+- _Member1 (Vraj Sunilkumar Shah) Branch GitLab URL_: <https://git.cs.dal.ca/kumawat/csci-5709-grp-14/-/tree/vraj_shah?ref_type=heads>
+- _Member2 (Ashish Bhasin) Branch GitLab URL_: <https://git.cs.dal.ca/kumawat/csci-5709-grp-14/-/tree/ashish_bhasin?ref_type=heads>
+- _Member3 (Christin Saji) Branch GitLab URL_: <https://git.cs.dal.ca/kumawat/csci-5709-grp-14/-/tree/christin_saji?ref_type=heads>
+- _Member4 (Dheemanth Rajendra Prasad Kumawat) Branch GitLab URL_: <https://git.cs.dal.ca/kumawat/csci-5709-grp-14/-/tree/dheemanth?ref_type=heads>
+- _Member5 (Jaydipsinh Ranjitsinh Padhiyar) Branch GitLab URL_: <https://git.cs.dal.ca/kumawat/csci-5709-grp-14/-/tree/jaydipsinh_padhiyar?ref_type=heads>
+- _Member6 (Nizamul Kazi) Branch GitLab URL_: <https://git.cs.dal.ca/kumawat/csci-5709-grp-14/-/tree/nizamul_kazi?ref_type=heads>
+
 ## Authors
 
 - [Christin Saji](christin.saji@dal.ca) - _(Owner)_
