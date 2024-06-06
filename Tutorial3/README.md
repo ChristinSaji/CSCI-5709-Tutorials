@@ -87,11 +87,13 @@ To deploy the React app to Netlify, follow these steps:
 
 ### RegistrationForm.jsx
 
-_Lines 15 - 33_
+_Lines 15 - 39_
 
 ```
-const validate = () => {
+  const validate = () => {
     const errors = {};
+    const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])/;
+
     if (!formData.firstName.match(/^[A-Za-z]+$/)) {
       errors.firstName = "First Name should contain only letters";
     }
@@ -101,8 +103,12 @@ const validate = () => {
     if (!formData.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
       errors.email = "Invalid email format";
     }
-    if (formData.password.length < 8) {
-      errors.password = "Password should be at least 8 characters long";
+    if (
+      formData.password.length < 8 ||
+      !formData.password.match(passwordRegex)
+    ) {
+      errors.password =
+        "Password should be at least 8 characters long and contain at least one letter, one number, and one special character";
     }
     if (formData.password !== formData.confirmPassword) {
       errors.confirmPassword = "Passwords do not match";
