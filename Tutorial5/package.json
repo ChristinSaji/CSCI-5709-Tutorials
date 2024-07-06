@@ -4,7 +4,7 @@
   "description": "Back-End Frameworks I",
   "main": "server.js",
   "scripts": {
-    "build": "netlify-lambda build functions",
+    "build": "netlify-lambda build functions --config netlify.toml",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
