@@ -22,6 +22,40 @@ app.get("/users", (req, res) => {
   }
 });
 
+app.put("/update/:id", (req, res) => {
+  try {
+    const { id } = req.params;
+    const { email, firstName } = req.body;
+
+    if (!email && !firstName) {
+      return res.status(400).json({
+        message: "Bad Request: Missing email or firstName",
+        success: false,
+      });
+    }
+
+    let user = users.find((user) => user.id === id);
+    if (user) {
+      user.email = email || user.email;
+      user.firstName = firstName || user.firstName;
+      res.status(200).json({
+        message: "User updated",
+        success: true,
+      });
+    } else {
+      res.status(404).json({
+        message: "User not found",
+        success: false,
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      message: "Internal Server Error",
+      success: false,
+    });
+  }
+});
+
 app.use((req, res, next) => {
   res.status(200).json({
     message: "It Works!",
