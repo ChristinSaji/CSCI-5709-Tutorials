@@ -56,6 +56,33 @@ app.put("/update/:id", (req, res) => {
   }
 });
 
+app.post("/add", (req, res) => {
+  try {
+    const { email, firstName } = req.body;
+
+    if (!email || !firstName) {
+      return res.status(400).json({
+        message: "Bad Request: Missing email or firstName",
+        success: false,
+      });
+    }
+
+    const id = (Math.random() * 1000000).toFixed(0);
+    const newUser = { email, firstName, id };
+    users.push(newUser);
+
+    res.status(201).json({
+      message: "User added",
+      success: true,
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Internal Server Error",
+      success: false,
+    });
+  }
+});
+
 app.use((req, res, next) => {
   res.status(200).json({
     message: "It Works!",
