@@ -4,15 +4,11 @@
   "description": "Back-End Frameworks I",
   "main": "server.js",
   "scripts": {
-    "build": "netlify-lambda build functions",
-    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Christin Saji",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2",
-    "netlify-lambda": "^1.6.3",
-    "serverless-http": "^2.7.0"
+    "express": "^4.19.2"
   }
 }
