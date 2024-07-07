@@ -83,6 +83,29 @@ app.post("/add", (req, res) => {
   }
 });
 
+app.get("/user/:id", (req, res) => {
+  try {
+    const { id } = req.params;
+    const user = users.find((user) => user.id === id);
+    if (user) {
+      res.status(200).json({
+        success: true,
+        user: user,
+      });
+    } else {
+      res.status(404).json({
+        message: "User not found",
+        success: false,
+      });
+    }
+  } catch (error) {
+    res.status(500).json({
+      message: "Internal Server Error",
+      success: false,
+    });
+  }
+});
+
 app.use((req, res, next) => {
   res.status(200).json({
     message: "It Works!",
